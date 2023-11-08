@@ -2,23 +2,21 @@ import { execSync } from 'node:child_process';
 
 import { findFiles } from '@codemod-utils/files';
 
-import finalize from './steps/finalize.js';
 import { createOptions } from './steps/index.js';
-import inlineTemplate from './steps/inline-template.js';
-import renameJsToGjs from './steps/rename-js-to-gjs.js';
-import resolveImports from './steps/resolve-imports.js';
+import unaction, { DeliberateError, NotNecessary } from './steps/unaction.js';
 import type { CodemodOptions } from './types/index.js';
 
 export function runCodemod(codemodOptions: CodemodOptions): void {
   const options = createOptions(codemodOptions);
 
   const candidates = findFiles('**/*.hbs', {
-    ignoreList: ['**/templates/**/*.hbs'],
+    ignoreList: ['**/node_modules/**'],
     projectRoot: codemodOptions.projectRoot,
   });
 
   const converted: string[] = [];
-  const skipped: [string, string][] = [];
+  let skipped = 0;
+  const groups: Map<string, string[]> = new Map();
 
   for (const candidate of candidates) {
     const goodRef = execSync('git rev-parse HEAD', {
@@ -37,13 +35,10 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
 
       options.filename = candidate;
 
-      renameJsToGjs(options);
-      resolveImports(options);
-      inlineTemplate(options);
-      finalize(options);
+      unaction(options);
 
       console.log(
-        execSync(`git show --color HEAD~`, {
+        execSync(`git show --color HEAD`, {
           cwd: options.projectRoot,
           encoding: 'utf8',
         }),
@@ -51,6 +46,10 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
 
       converted.push(candidate);
     } catch (error: unknown) {
+      if (error instanceof NotNecessary) {
+        continue;
+      }
+
       let reason = String(error);
 
       if (error instanceof Error) {
@@ -59,6 +58,15 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
 
       reason = reason.trim();
 
+      if (
+        !(error instanceof DeliberateError) &&
+        !reason.includes(
+          'Decorators cannot be used to decorate object literal properties.',
+        )
+      ) {
+        debugger;
+      }
+
       console.warn(`Failed to convert ${candidate}: ${reason}`);
 
       execSync(`git reset --hard ${goodRef}`, {
@@ -66,7 +74,16 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
         stdio: 'ignore',
       });
 
-      skipped.push([candidate, reason]);
+      skipped++;
+
+      let group = groups.get(reason);
+
+      if (!group) {
+        group = [];
+        groups.set(reason, group);
+      }
+
+      group.push(candidate);
     }
   }
 
@@ -80,12 +97,15 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
     console.log('\n');
   }
 
-  if (skipped.length) {
-    console.log('Skipped %d files:\n', skipped.length);
+  if (skipped) {
+    console.log('Skipped %d files:\n', skipped);
 
-    for (const [file, reason] of skipped) {
-      console.log(`- ${file}`);
-      console.log(`  ${reason}`);
+    for (const [reason, group] of groups) {
+      console.log(`- ${reason}`);
+      for (const file of group) {
+        console.log(`  - ${file}`);
+        console.log(`    ${reason}`);
+      }
     }
 
     console.log('\n');
