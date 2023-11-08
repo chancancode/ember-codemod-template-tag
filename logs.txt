@@ -1,0 +1,1873 @@
+Converting app/assets/javascripts/admin/addon/components/ace-editor.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-backups-logs.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-config-area-sidebar-experiment.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-editable-field.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-form-row.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-penalty-history.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-penalty-post-action.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-penalty-reason.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-penalty-similar-users.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-chart.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-counters.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-counts.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-inline-table.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-per-day-counts.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-stacked-chart.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-storage-stats.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-table-cell.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-table-header.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-table-row.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-table.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report-trust-level-counts.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-report.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-theme-editor.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-user-field-item.hbs
+Converting app/assets/javascripts/admin/addon/components/admin-watched-word.hbs
+Converting app/assets/javascripts/admin/addon/components/color-input.hbs
+Converting app/assets/javascripts/admin/addon/components/dashboard-new-feature-item.hbs
+Converting app/assets/javascripts/admin/addon/components/dashboard-new-features.hbs
+Converting app/assets/javascripts/admin/addon/components/dashboard-problems.hbs
+Converting app/assets/javascripts/admin/addon/components/email-styles-editor.hbs
+Converting app/assets/javascripts/admin/addon/components/embeddable-host.hbs
+[33mcommit 953515ad93166f83754a7e35aabce84430176cbd[m
+Author: Godfrey Chan <godfreykfc@gmail.com>
+Date:   Wed Nov 8 03:16:36 2023 -0800
+
+    DEV: {{action}} -> @action embeddable-host.hbs
+
+[1mdiff --git a/app/assets/javascripts/admin/addon/components/embeddable-host.hbs b/app/assets/javascripts/admin/addon/components/embeddable-host.hbs[m
+[1mindex f6cd35599f..88f698c47c 100644[m
+[1m--- a/app/assets/javascripts/admin/addon/components/embeddable-host.hbs[m
+[1m+++ b/app/assets/javascripts/admin/addon/components/embeddable-host.hbs[m
+[36m@@ -4,7 +4,7 @@[m
+     <Input[m
+       @value={{this.buffered.host}}[m
+       placeholder="example.com"[m
+[31m-      @enter={{action "save"}}[m
+[32m+[m[32m      @enter={{this.save}}[m
+       class="host-name"[m
+       autofocus={{true}}[m
+     />[m
+[36m@@ -14,7 +14,7 @@[m
+     <Input[m
+       @value={{this.buffered.allowed_paths}}[m
+       placeholder="/blog/.*"[m
+[31m-      @enter={{action "save"}}[m
+[32m+[m[32m      @enter={{this.save}}[m
+       class="path-allowlist"[m
+     />[m
+   </td>[m
+[1mdiff --git a/app/assets/javascripts/admin/addon/components/embeddable-host.js b/app/assets/javascripts/admin/addon/components/embeddable-host.js[m
+[1mindex 4f45a7143b..e5a6228c6a 100644[m
+[1m--- a/app/assets/javascripts/admin/addon/components/embeddable-host.js[m
+[1m+++ b/app/assets/javascripts/admin/addon/components/embeddable-host.js[m
+[36m@@ -42,7 +42,7 @@[m [mexport default class EmbeddableHost extends Component.extend([m
+     this.set("editToggled", true);[m
+   }[m
+ [m
+[31m-  @action[m
+[32m+[m[32m  @__action__[m
+   save() {[m
+     if (this.cantSave) {[m
+       return;[m
+
+Converting app/assets/javascripts/admin/addon/components/embedding-setting.hbs
+Converting app/assets/javascripts/admin/addon/components/emoji-value-list.hbs
+Converting app/assets/javascripts/admin/addon/components/flag-user-lists.hbs
+Converting app/assets/javascripts/admin/addon/components/flag-user.hbs
+Converting app/assets/javascripts/admin/addon/components/form-template/form.hbs
+Converting app/assets/javascripts/admin/addon/components/form-template/info-header.hbs
+Converting app/assets/javascripts/admin/addon/components/form-template/row-item.hbs
+Converting app/assets/javascripts/admin/addon/components/highlighted-code.hbs
+Converting app/assets/javascripts/admin/addon/components/inline-edit-checkbox.hbs
+Converting app/assets/javascripts/admin/addon/components/install-theme-item.hbs
+Converting app/assets/javascripts/admin/addon/components/ip-lookup.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/api-key-urls.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/badge-preview.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/color-scheme-select-base.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/custom-date-range.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/delete-posts-confirmation.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/delete-user-posts-progress.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/edit-badge-groupings.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/form-template-validation-options.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/incoming-email.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/install-theme.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/merge-users-confirmation.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/merge-users-progress.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/merge-users-prompt.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/penalize-user.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/reseed.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/site-setting-default-categories.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/staff-action-log-details.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/start-backup.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/theme-change.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/uploaded-image-list.hbs
+Converting app/assets/javascripts/admin/addon/components/modal/watched-word-test.hbs
+Converting app/assets/javascripts/admin/addon/components/permalink-form.hbs
+Converting app/assets/javascripts/admin/addon/components/plugin-commit-hash.hbs
+Converting app/assets/javascripts/admin/addon/components/report-filters/bool.hbs
+Converting app/assets/javascripts/admin/addon/components/report-filters/category.hbs
+Converting app/assets/javascripts/admin/addon/components/report-filters/group.hbs
+Converting app/assets/javascripts/admin/addon/components/report-filters/list.hbs
+Converting app/assets/javascripts/admin/addon/components/resumable-upload.hbs
+Converting app/assets/javascripts/admin/addon/components/screened-ip-address-form.hbs
+Converting app/assets/javascripts/admin/addon/components/secret-value-list.hbs
+Converting app/assets/javascripts/admin/addon/components/setting-validation-message.hbs
+Converting app/assets/javascripts/admin/addon/components/silence-details.hbs
+Converting app/assets/javascripts/admin/addon/components/simple-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-customization-change-details.hbs
+Converting app/assets/javascripts/admin/addon/components/site-customization-change-field.hbs
+Converting app/assets/javascripts/admin/addon/components/site-setting.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/bool.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/category-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/category.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/color.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/compact-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/emoji-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/enum.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/group-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/host-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/integer.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/named-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/secret-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/simple-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/string.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/tag-group-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/tag-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/upload.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/uploaded-image-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/url-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-settings/value-list.hbs
+Converting app/assets/javascripts/admin/addon/components/site-text-summary.hbs
+Converting app/assets/javascripts/admin/addon/components/staff-actions.hbs
+Converting app/assets/javascripts/admin/addon/components/tags-uploader.hbs
+Converting app/assets/javascripts/admin/addon/components/theme-settings-editor.hbs
+Converting app/assets/javascripts/admin/addon/components/theme-upload-add.hbs
+Converting app/assets/javascripts/admin/addon/components/themes-list-item.hbs
+Converting app/assets/javascripts/admin/addon/components/themes-list.hbs
+Converting app/assets/javascripts/admin/addon/components/value-list.hbs
+Converting app/assets/javascripts/admin/addon/components/version-checks.hbs
+Converting app/assets/javascripts/admin/addon/components/watched-word-form.hbs
+Converting app/assets/javascripts/admin/addon/components/watched-word-uploader.hbs
+Converting app/assets/javascripts/admin/addon/components/webhook-event-chooser.hbs
+Converting app/assets/javascripts/admin/addon/components/webhook-event.hbs
+Converting app/assets/javascripts/admin/addon/components/webhook-events.hbs
+Converting app/assets/javascripts/admin/addon/components/webhook-status.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-badges.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-badges/award.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-badges/index.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-badges/show.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-revamp-config-area.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-revamp-config.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-revamp-lobby.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin-revamp.hbs
+Converting app/assets/javascripts/admin/addon/templates/admin.hbs
+Converting app/assets/javascripts/admin/addon/templates/api-keys-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/api-keys-new.hbs
+Converting app/assets/javascripts/admin/addon/templates/api-keys-show.hbs
+Converting app/assets/javascripts/admin/addon/templates/api.hbs
+Converting app/assets/javascripts/admin/addon/templates/backups-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/backups-logs.hbs
+Converting app/assets/javascripts/admin/addon/templates/backups.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-colors-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-colors-show.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-colors.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-email-style-edit.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-email-style.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-email-templates-edit.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-email-templates.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-form-templates-edit.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-form-templates-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-form-templates-new.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-robots-txt.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-themes-edit.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-themes-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-themes-show.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize-themes.hbs
+Converting app/assets/javascripts/admin/addon/templates/customize.hbs
+Converting app/assets/javascripts/admin/addon/templates/dashboard.hbs
+Converting app/assets/javascripts/admin/addon/templates/dashboard_general.hbs
+Converting app/assets/javascripts/admin/addon/templates/dashboard_moderation.hbs
+Converting app/assets/javascripts/admin/addon/templates/dashboard_reports.hbs
+Converting app/assets/javascripts/admin/addon/templates/dashboard_security.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-advanced-test.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-bounced.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-preview-digest.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-received.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-rejected.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-sent.hbs
+Converting app/assets/javascripts/admin/addon/templates/email-skipped.hbs
+Converting app/assets/javascripts/admin/addon/templates/email.hbs
+Converting app/assets/javascripts/admin/addon/templates/embedding.hbs
+Converting app/assets/javascripts/admin/addon/templates/emojis.hbs
+Converting app/assets/javascripts/admin/addon/templates/logs.hbs
+Converting app/assets/javascripts/admin/addon/templates/logs/screened-emails.hbs
+Converting app/assets/javascripts/admin/addon/templates/logs/screened-ip-addresses.hbs
+Converting app/assets/javascripts/admin/addon/templates/logs/screened-urls.hbs
+Converting app/assets/javascripts/admin/addon/templates/logs/staff-action-logs.hbs
+Converting app/assets/javascripts/admin/addon/templates/permalinks.hbs
+Converting app/assets/javascripts/admin/addon/templates/plugins-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/plugins.hbs
+Converting app/assets/javascripts/admin/addon/templates/reports-show.hbs
+Converting app/assets/javascripts/admin/addon/templates/search-logs-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/search-logs-term.hbs
+Converting app/assets/javascripts/admin/addon/templates/site-settings-category.hbs
+Converting app/assets/javascripts/admin/addon/templates/site-settings.hbs
+Converting app/assets/javascripts/admin/addon/templates/site-text-edit.hbs
+Converting app/assets/javascripts/admin/addon/templates/site-text-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/site-text.hbs
+Converting app/assets/javascripts/admin/addon/templates/user-badges.hbs
+Converting app/assets/javascripts/admin/addon/templates/user-fields.hbs
+Converting app/assets/javascripts/admin/addon/templates/user-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/user-tl3-requirements.hbs
+Converting app/assets/javascripts/admin/addon/templates/user.hbs
+Converting app/assets/javascripts/admin/addon/templates/users-list-show.hbs
+Converting app/assets/javascripts/admin/addon/templates/users-list.hbs
+Converting app/assets/javascripts/admin/addon/templates/watched-words-action.hbs
+Converting app/assets/javascripts/admin/addon/templates/watched-words.hbs
+Converting app/assets/javascripts/admin/addon/templates/web-hooks-edit.hbs
+Converting app/assets/javascripts/admin/addon/templates/web-hooks-index.hbs
+Converting app/assets/javascripts/admin/addon/templates/web-hooks-show.hbs
+Converting app/assets/javascripts/admin/addon/templates/web-hooks.hbs
+Converting app/assets/javascripts/dialog-holder/addon/components/dialog-holder.hbs
+Converting app/assets/javascripts/discourse/app/components/about-page-users.hbs
+Converting app/assets/javascripts/discourse/app/components/activation-controls.hbs
+Converting app/assets/javascripts/discourse/app/components/activation-email-form.hbs
+Converting app/assets/javascripts/discourse/app/components/ai-summary-skeleton.hbs
+Converting app/assets/javascripts/discourse/app/components/avatar-uploader.hbs
+Converting app/assets/javascripts/discourse/app/components/backup-codes.hbs
+Converting app/assets/javascripts/discourse/app/components/badge-button.hbs
+Converting app/assets/javascripts/discourse/app/components/badge-card.hbs
+Converting app/assets/javascripts/discourse/app/components/badge-selector.hbs
+Converting app/assets/javascripts/discourse/app/components/badge-title.hbs
+Converting app/assets/javascripts/discourse/app/components/basic-topic-list.hbs
+Converting app/assets/javascripts/discourse/app/components/bookmark-icon.hbs
+Converting app/assets/javascripts/discourse/app/components/bookmark-list.hbs
+Converting app/assets/javascripts/discourse/app/components/bootstrap-mode-notice.hbs
+Converting app/assets/javascripts/discourse/app/components/bread-crumbs.hbs
+Converting app/assets/javascripts/discourse/app/components/bulk-actions/append-tags.hbs
+Converting app/assets/javascripts/discourse/app/components/bulk-actions/change-category.hbs
+Converting app/assets/javascripts/discourse/app/components/bulk-actions/change-tags.hbs
+Converting app/assets/javascripts/discourse/app/components/bulk-actions/notification-level.hbs
+Converting app/assets/javascripts/discourse/app/components/calendar-date-time-input.hbs
+Converting app/assets/javascripts/discourse/app/components/cancel-link.hbs
+Converting app/assets/javascripts/discourse/app/components/card-container.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-and-latest-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-and-top-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-boxes-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-boxes-with-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-boxes.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-only.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-topic-list.hbs
+Converting app/assets/javascripts/discourse/app/components/categories-with-featured-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/category-name-fields.hbs
+Converting app/assets/javascripts/discourse/app/components/category-permission-row.hbs
+Converting app/assets/javascripts/discourse/app/components/category-read-only-banner.hbs
+Converting app/assets/javascripts/discourse/app/components/category-title-before.hbs
+Converting app/assets/javascripts/discourse/app/components/category-title-link.hbs
+Converting app/assets/javascripts/discourse/app/components/category-unread.hbs
+Converting app/assets/javascripts/discourse/app/components/cdn-img.hbs
+Converting app/assets/javascripts/discourse/app/components/char-counter.hbs
+Converting app/assets/javascripts/discourse/app/components/choose-message.hbs
+Converting app/assets/javascripts/discourse/app/components/choose-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/color-picker.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-action-title.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-container.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-editor.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-fullscreen-prompt.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-messages.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-save-button.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-tip-close-button.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-title.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-toggles.hbs
+Converting app/assets/javascripts/discourse/app/components/composer-user-selector.hbs
+Converting app/assets/javascripts/discourse/app/components/conditional-in-element.hbs
+Converting app/assets/javascripts/discourse/app/components/conditional-loading-section.hbs
+Converting app/assets/javascripts/discourse/app/components/copy-button.hbs
+Converting app/assets/javascripts/discourse/app/components/count-i18n.hbs
+Converting app/assets/javascripts/discourse/app/components/create-invite-uploader.hbs
+Converting app/assets/javascripts/discourse/app/components/create-topic-button.hbs
+Converting app/assets/javascripts/discourse/app/components/d-editor.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox/backdrop.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox/body.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox/carousel.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox/footer.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox/header.hbs
+Converting app/assets/javascripts/discourse/app/components/d-lightbox/screen-reader-announcer.hbs
+Converting app/assets/javascripts/discourse/app/components/d-modal-body.hbs
+Converting app/assets/javascripts/discourse/app/components/d-modal-cancel.hbs
+Converting app/assets/javascripts/discourse/app/components/d-modal-legacy.hbs
+Converting app/assets/javascripts/discourse/app/components/d-modal.hbs
+Converting app/assets/javascripts/discourse/app/components/d-navigation-item.hbs
+Converting app/assets/javascripts/discourse/app/components/d-navigation.hbs
+Converting app/assets/javascripts/discourse/app/components/date-input.hbs
+Converting app/assets/javascripts/discourse/app/components/date-picker.hbs
+Converting app/assets/javascripts/discourse/app/components/date-time-input-range.hbs
+Converting app/assets/javascripts/discourse/app/components/date-time-input.hbs
+Converting app/assets/javascripts/discourse/app/components/desktop-notification-config.hbs
+Converting app/assets/javascripts/discourse/app/components/dialog-messages/group-delete.hbs
+Converting app/assets/javascripts/discourse/app/components/dialog-messages/second-factor-confirm-phrase.hbs
+Converting app/assets/javascripts/discourse/app/components/directory-item.hbs
+Converting app/assets/javascripts/discourse/app/components/directory-table.hbs
+Converting app/assets/javascripts/discourse/app/components/disabled-icon.hbs
+Converting app/assets/javascripts/discourse/app/components/discourse-banner.hbs
+Converting app/assets/javascripts/discourse/app/components/discourse-linked-text.hbs
+Converting app/assets/javascripts/discourse/app/components/discourse-tag-bound.hbs
+Converting app/assets/javascripts/discourse/app/components/discovery/filter-navigation.hbs
+Converting app/assets/javascripts/discourse/app/components/discovery/layout.hbs
+Converting app/assets/javascripts/discourse/app/components/discovery/navigation.hbs
+Converting app/assets/javascripts/discourse/app/components/discovery/topics.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-general.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-images.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-panel.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-security.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-settings.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-tab.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-tags.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-category-topic-template.hbs
+Converting app/assets/javascripts/discourse/app/components/edit-topic-timer-form.hbs
+Converting app/assets/javascripts/discourse/app/components/emoji-group-buttons.hbs
+Converting app/assets/javascripts/discourse/app/components/emoji-group-sections.hbs
+Converting app/assets/javascripts/discourse/app/components/emoji-picker.hbs
+Converting app/assets/javascripts/discourse/app/components/emoji-uploader.hbs
+Converting app/assets/javascripts/discourse/app/components/empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/expand-post.hbs
+Converting app/assets/javascripts/discourse/app/components/featured-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/flag-action-type.hbs
+Converting app/assets/javascripts/discourse/app/components/flag-selection.hbs
+Converting app/assets/javascripts/discourse/app/components/flat-button.hbs
+Converting app/assets/javascripts/discourse/app/components/footer-message.hbs
+Converting app/assets/javascripts/discourse/app/components/form-template-field/checkbox.hbs
+Converting app/assets/javascripts/discourse/app/components/form-template-field/dropdown.hbs
+Converting app/assets/javascripts/discourse/app/components/form-template-field/input.hbs
+Converting app/assets/javascripts/discourse/app/components/form-template-field/multi-select.hbs
+Converting app/assets/javascripts/discourse/app/components/form-template-field/textarea.hbs
+Converting app/assets/javascripts/discourse/app/components/future-date-input.hbs
+Converting app/assets/javascripts/discourse/app/components/generated-invite-link.hbs
+Converting app/assets/javascripts/discourse/app/components/global-notice.hbs
+Converting app/assets/javascripts/discourse/app/components/google-icon.hbs
+Converting app/assets/javascripts/discourse/app/components/google-search.hbs
+Converting app/assets/javascripts/discourse/app/components/group-activity-filter.hbs
+Converting app/assets/javascripts/discourse/app/components/group-card-contents.hbs
+Converting app/assets/javascripts/discourse/app/components/group-flair-inputs.hbs
+Converting app/assets/javascripts/discourse/app/components/group-imap-email-settings.hbs
+Converting app/assets/javascripts/discourse/app/components/group-manage-email-settings.hbs
+Converting app/assets/javascripts/discourse/app/components/group-manage-logs-filter.hbs
+Converting app/assets/javascripts/discourse/app/components/group-manage-logs-row.hbs
+Converting app/assets/javascripts/discourse/app/components/group-manage-save-button.hbs
+Converting app/assets/javascripts/discourse/app/components/group-member.hbs
+Converting app/assets/javascripts/discourse/app/components/group-membership-button.hbs
+Converting app/assets/javascripts/discourse/app/components/group-navigation.hbs
+Converting app/assets/javascripts/discourse/app/components/group-post.hbs
+Converting app/assets/javascripts/discourse/app/components/group-selector.hbs
+Converting app/assets/javascripts/discourse/app/components/group-smtp-email-settings.hbs
+Converting app/assets/javascripts/discourse/app/components/groups-form-interaction-fields.hbs
+Converting app/assets/javascripts/discourse/app/components/groups-form-membership-fields.hbs
+Converting app/assets/javascripts/discourse/app/components/groups-form-profile-fields.hbs
+Converting app/assets/javascripts/discourse/app/components/groups-info.hbs
+Converting app/assets/javascripts/discourse/app/components/hidden-details.hbs
+Converting app/assets/javascripts/discourse/app/components/horizontal-overflow-nav.hbs
+Converting app/assets/javascripts/discourse/app/components/ignored-user-list-item.hbs
+Converting app/assets/javascripts/discourse/app/components/ignored-user-list.hbs
+Converting app/assets/javascripts/discourse/app/components/images-uploader.hbs
+Converting app/assets/javascripts/discourse/app/components/input-tip.hbs
+Converting app/assets/javascripts/discourse/app/components/invite-panel.hbs
+Converting app/assets/javascripts/discourse/app/components/latest-topic-list-item.hbs
+Converting app/assets/javascripts/discourse/app/components/link-to-input.hbs
+Converting app/assets/javascripts/discourse/app/components/loading-slider-fallback-spinner.hbs
+Converting app/assets/javascripts/discourse/app/components/login-buttons.hbs
+Converting app/assets/javascripts/discourse/app/components/menu-panel.hbs
+Converting app/assets/javascripts/discourse/app/components/mobile-category-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/modal-container.hbs
+Converting app/assets/javascripts/discourse/app/components/modal-footer-close.hbs
+Converting app/assets/javascripts/discourse/app/components/modal-tab.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/activation-edit.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/activation-resent.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/add-pm-participants.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/associate-account-confirm.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/auth-token.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/avatar-selector.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/bookmark.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/change-owner.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/change-post-notice.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/change-timestamp.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/convert-to-public-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/create-account.hbs
+[33mcommit fc26f44b038c3b52f9a36c15c184c8f998ca91ac[m
+Author: Godfrey Chan <godfreykfc@gmail.com>
+Date:   Wed Nov 8 03:17:24 2023 -0800
+
+    DEV: {{action}} -> @action create-account.hbs
+
+[1mdiff --git a/app/assets/javascripts/discourse/app/components/modal/create-account.hbs b/app/assets/javascripts/discourse/app/components/modal/create-account.hbs[m
+[1mindex 5382809552..570c6a8e3d 100644[m
+[1m--- a/app/assets/javascripts/discourse/app/components/modal/create-account.hbs[m
+[1m+++ b/app/assets/javascripts/discourse/app/components/modal/create-account.hbs[m
+[36m@@ -40,7 +40,7 @@[m
+             {{/if}}[m
+             <div class="input-group create-account-email">[m
+               <Input[m
+[31m-                {{on "focusout" (action "checkEmailAvailability")}}[m
+[32m+[m[32m                {{on "focusout" this.checkEmailAvailability}}[m
+                 @type="email"[m
+                 @value={{this.model.accountEmail}}[m
+                 disabled={{this.emailDisabled}}[m
+[36m@@ -253,7 +253,7 @@[m
+           </div>[m
+ [m
+           <DButton[m
+[31m-            @action={{action "createAccount"}}[m
+[32m+[m[32m            @action={{this.createAccount}}[m
+             @disabled={{this.submitDisabled}}[m
+             @label="create_account.title"[m
+             @isLoading={{this.formSubmitted}}[m
+[36m@@ -279,7 +279,7 @@[m
+ [m
+       {{#if this.showExternalLoginButtons}}[m
+         <div class="create-account-login-buttons">[m
+[31m-          <LoginButtons @externalLogin={{action "externalLogin"}} />[m
+[32m+[m[32m          <LoginButtons @externalLogin={{this.externalLogin}} />[m
+         </div>[m
+       {{/if}}[m
+ [m
+[1mdiff --git a/app/assets/javascripts/discourse/app/components/modal/create-account.js b/app/assets/javascripts/discourse/app/components/modal/create-account.js[m
+[1mindex ab7567daf1..05dc232d1c 100644[m
+[1m--- a/app/assets/javascripts/discourse/app/components/modal/create-account.js[m
+[1m+++ b/app/assets/javascripts/discourse/app/components/modal/create-account.js[m
+[36m@@ -244,7 +244,7 @@[m [mexport default class CreateAccount extends Component.extend([m
+     });[m
+   }[m
+ [m
+[31m-  @action[m
+[32m+[m[32m  @__action__[m
+   checkEmailAvailability() {[m
+     if ([m
+       !this.emailValidation.ok ||[m
+[36m@@ -474,7 +474,7 @@[m [mexport default class CreateAccount extends Component.extend([m
+     this.toggleProperty("maskPassword");[m
+   }[m
+ [m
+[31m-  @action[m
+[32m+[m[32m  @__action__[m
+   externalLogin(provider) {[m
+     // we will automatically redirect to the external auth service[m
+     this.modal.show(LoginModal, {[m
+[36m@@ -486,7 +486,7 @@[m [mexport default class CreateAccount extends Component.extend([m
+     });[m
+   }[m
+ [m
+[31m-  @action[m
+[32m+[m[32m  @__action__[m
+   createAccount() {[m
+     this.set("flash", "");[m
+     this.set("forceValidationReason", true);[m
+
+Converting app/assets/javascripts/discourse/app/components/modal/create-invite-bulk.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/create-invite.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/customize-form-template-view.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/delete-themes-confirm.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/delete-topic-confirm.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/delete-topic-disallowed.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/discard-draft.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/dismiss-notification-confirmation.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/dismiss-read.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/do-not-disturb.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/download-calendar.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/edit-slow-mode.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/edit-topic-timer.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/edit-user-directory-columns.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/explain-reviewable.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/fast-edit.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/feature-topic-on-profile.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/feature-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/flag.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/forgot-password.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/form-template-form-preview.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/fullscreen-code.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/fullscreen-table.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/grant-badge.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/group-add-members.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/group-default-notifications.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/history.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/history/revision.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/history/revisions.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/history/topic-footer.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/ignore-duration-with-username.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/insert-hyperlink.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/json-schema-editor.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/jump-to-post.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/keyboard-shortcuts-help.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/login.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/login/footer.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/login/local-login-form.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/login/welcome-header.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/move-to-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/not-activated.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/post-enqueued.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/publish-page.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/raw-email.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/reject-reason-reviewable.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/request-group-membership-form.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/revise-and-reject-post-reviewable.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/second-factor-add-security-key.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/second-factor-add-totp.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/second-factor-backup-edit.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/second-factor-edit-security-key.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/second-factor-edit.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/share-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/sidebar-section-form.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/tag-upload.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/topic-bulk-actions.hbs
+Converting app/assets/javascripts/discourse/app/components/modal/user-status.hbs
+Converting app/assets/javascripts/discourse/app/components/more-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/mount-widget.hbs
+Converting app/assets/javascripts/discourse/app/components/navigation-bar.hbs
+Converting app/assets/javascripts/discourse/app/components/navigation-item.hbs
+Converting app/assets/javascripts/discourse/app/components/new-list-header-controls-wrapper.hbs
+Converting app/assets/javascripts/discourse/app/components/notification-consent-banner.hbs
+Converting app/assets/javascripts/discourse/app/components/offline-indicator.hbs
+Converting app/assets/javascripts/discourse/app/components/page-loading-slider.hbs
+Converting app/assets/javascripts/discourse/app/components/parent-category-row.hbs
+Converting app/assets/javascripts/discourse/app/components/pending-post.hbs
+Converting app/assets/javascripts/discourse/app/components/pick-files-button.hbs
+Converting app/assets/javascripts/discourse/app/components/plugin-outlet.hbs
+Converting app/assets/javascripts/discourse/app/components/popup-input-tip.hbs
+Converting app/assets/javascripts/discourse/app/components/popup-menu.hbs
+Converting app/assets/javascripts/discourse/app/components/preference-checkbox.hbs
+Converting app/assets/javascripts/discourse/app/components/private-message-glyph.hbs
+Converting app/assets/javascripts/discourse/app/components/pwa-install-banner.hbs
+Converting app/assets/javascripts/discourse/app/components/related-messages.hbs
+Converting app/assets/javascripts/discourse/app/components/relative-time-picker.hbs
+Converting app/assets/javascripts/discourse/app/components/responsive-table.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-claimed-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-conversation-post.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-created-by-name.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-created-by.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-field-category.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-field-editor.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-field-tags.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-field-text.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-field-textarea.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-field.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-flagged-post.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-histories.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-item.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-post-edits.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-post-header.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-post.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-queued-post.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-score.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-scores.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-tags.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-topic-link.hbs
+Converting app/assets/javascripts/discourse/app/components/reviewable-user.hbs
+Converting app/assets/javascripts/discourse/app/components/save-controls.hbs
+Converting app/assets/javascripts/discourse/app/components/search-advanced-options.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu-panel.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/advanced-button.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/browser-search-tip.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/clear-button.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/highlighted-search.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/assistant-item.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/assistant.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/blurb.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/initial-options.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/more-link.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/random-quick-tip.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/recent-searches.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/type/category.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/type/group.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/type/post.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/type/tag.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/type/topic.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/type/user.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/results/types.hbs
+Converting app/assets/javascripts/discourse/app/components/search-menu/search-term.hbs
+Converting app/assets/javascripts/discourse/app/components/search-result-entries.hbs
+Converting app/assets/javascripts/discourse/app/components/search-result-entry.hbs
+Converting app/assets/javascripts/discourse/app/components/second-factor-form.hbs
+Converting app/assets/javascripts/discourse/app/components/second-factor-input.hbs
+Converting app/assets/javascripts/discourse/app/components/security-key-form.hbs
+Converting app/assets/javascripts/discourse/app/components/selected-posts.hbs
+Converting app/assets/javascripts/discourse/app/components/share-panel.hbs
+Converting app/assets/javascripts/discourse/app/components/share-source.hbs
+Converting app/assets/javascripts/discourse/app/components/shared-draft-controls.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/anonymous/categories-section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/anonymous/sections.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/anonymous/tags-section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/api-panels.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/api-section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/api-sections.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/common/all-categories-section-link.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/common/all-tags-section-link.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/common/custom-section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/common/custom-sections.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/edit-navigation-menu/categories-modal.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/edit-navigation-menu/modal.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/edit-navigation-menu/tags-modal.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/footer.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/hamburger-dropdown.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/more-section-link.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/more-section-links.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section-form-link.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section-header.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section-link-button.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section-link-prefix.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section-link.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section-message.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/sections.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/switch-panel-buttons.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/user/categories-section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/user/messages-section.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/user/sections.hbs
+Converting app/assets/javascripts/discourse/app/components/sidebar/user/tags-section.hbs
+Converting app/assets/javascripts/discourse/app/components/signup-cta.hbs
+Converting app/assets/javascripts/discourse/app/components/slow-mode-info.hbs
+Converting app/assets/javascripts/discourse/app/components/software-update-prompt.hbs
+Converting app/assets/javascripts/discourse/app/components/sub-category-item.hbs
+Converting app/assets/javascripts/discourse/app/components/sub-category-row.hbs
+Converting app/assets/javascripts/discourse/app/components/subcategories-with-featured-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/suggested-topics.hbs
+Converting app/assets/javascripts/discourse/app/components/summary-box.hbs
+Converting app/assets/javascripts/discourse/app/components/table-header-toggle.hbs
+Converting app/assets/javascripts/discourse/app/components/tag-drop-link.hbs
+Converting app/assets/javascripts/discourse/app/components/tag-groups-form.hbs
+Converting app/assets/javascripts/discourse/app/components/tag-info.hbs
+Converting app/assets/javascripts/discourse/app/components/tag-list.hbs
+Converting app/assets/javascripts/discourse/app/components/tap-tile-grid.hbs
+Converting app/assets/javascripts/discourse/app/components/tap-tile.hbs
+Converting app/assets/javascripts/discourse/app/components/text-overflow.hbs
+Converting app/assets/javascripts/discourse/app/components/time-input.hbs
+Converting app/assets/javascripts/discourse/app/components/time-shortcut-picker.hbs
+Converting app/assets/javascripts/discourse/app/components/toggle-password-mask.hbs
+Converting app/assets/javascripts/discourse/app/components/top-period-buttons.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-category.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-dismiss-buttons.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-entrance.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-footer-buttons.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-list-item.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-list.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-navigation-popup.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-navigation.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-post-badges.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-progress.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-status.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-timeline.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-timeline/back-button.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-timeline/container.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-timeline/scroller.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-timer-info.hbs
+Converting app/assets/javascripts/discourse/app/components/topic-title.hbs
+Converting app/assets/javascripts/discourse/app/components/track-selected.hbs
+Converting app/assets/javascripts/discourse/app/components/uppy-backup-uploader.hbs
+Converting app/assets/javascripts/discourse/app/components/uppy-image-uploader.hbs
+Converting app/assets/javascripts/discourse/app/components/user-avatar-flair.hbs
+Converting app/assets/javascripts/discourse/app/components/user-badge.hbs
+Converting app/assets/javascripts/discourse/app/components/user-card-contents.hbs
+Converting app/assets/javascripts/discourse/app/components/user-fields/confirm.hbs
+Converting app/assets/javascripts/discourse/app/components/user-fields/dropdown.hbs
+Converting app/assets/javascripts/discourse/app/components/user-fields/multiselect.hbs
+Converting app/assets/javascripts/discourse/app/components/user-fields/text.hbs
+Converting app/assets/javascripts/discourse/app/components/user-flag-percentage.hbs
+Converting app/assets/javascripts/discourse/app/components/user-info.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/bookmarks-list-empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/items-list-empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/items-list.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/likes-list-empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/menu-item.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/menu-tab.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/menu.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/messages-list-empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/notifications-list-empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/other-notifications-list-empty-state.hbs
+Converting app/assets/javascripts/discourse/app/components/user-menu/profile-tab-content.hbs
+Converting app/assets/javascripts/discourse/app/components/user-nav.hbs
+Converting app/assets/javascripts/discourse/app/components/user-nav/messages-secondary-nav.hbs
+Converting app/assets/javascripts/discourse/app/components/user-notification-schedule-day.hbs
+Converting app/assets/javascripts/discourse/app/components/user-notification-schedule.hbs
+Converting app/assets/javascripts/discourse/app/components/user-preferences/categories.hbs
+Converting app/assets/javascripts/discourse/app/components/user-preferences/tags.hbs
+Converting app/assets/javascripts/discourse/app/components/user-preferences/topic-tracking.hbs
+Converting app/assets/javascripts/discourse/app/components/user-preferences/user-api-keys.hbs
+Converting app/assets/javascripts/discourse/app/components/user-profile-avatar.hbs
+Converting app/assets/javascripts/discourse/app/components/user-stat.hbs
+Converting app/assets/javascripts/discourse/app/components/user-status-message.hbs
+Converting app/assets/javascripts/discourse/app/components/user-status-picker.hbs
+Converting app/assets/javascripts/discourse/app/components/user-stream-item.hbs
+Converting app/assets/javascripts/discourse/app/components/user-stream.hbs
+Converting app/assets/javascripts/discourse/app/components/user-summary-category-search.hbs
+Converting app/assets/javascripts/discourse/app/components/user-summary-section.hbs
+Converting app/assets/javascripts/discourse/app/components/user-summary-topic.hbs
+Converting app/assets/javascripts/discourse/app/components/user-summary-topics-list.hbs
+Converting app/assets/javascripts/discourse/app/components/user-summary-user.hbs
+Converting app/assets/javascripts/discourse/app/components/user-summary-users-list.hbs
+Converting app/assets/javascripts/discourse/app/components/username-preference.hbs
+Converting app/assets/javascripts/discourse/app/templates/about.hbs
+Converting app/assets/javascripts/discourse/app/templates/account-created.hbs
+Converting app/assets/javascripts/discourse/app/templates/account-created/edit-email.hbs
+Converting app/assets/javascripts/discourse/app/templates/account-created/index.hbs
+Converting app/assets/javascripts/discourse/app/templates/account-created/resent.hbs
+Converting app/assets/javascripts/discourse/app/templates/application.hbs
+Converting app/assets/javascripts/discourse/app/templates/badges/index.hbs
+Converting app/assets/javascripts/discourse/app/templates/badges/show.hbs
+Converting app/assets/javascripts/discourse/app/templates/composer/dominating-topic.hbs
+Converting app/assets/javascripts/discourse/app/templates/composer/education.hbs
+Converting app/assets/javascripts/discourse/app/templates/composer/get-a-room.hbs
+Converting app/assets/javascripts/discourse/app/templates/composer/group-mentioned.hbs
+Converting app/assets/javascripts/discourse/app/templates/composer/similar-topics.hbs
+Converting app/assets/javascripts/discourse/app/templates/discovery/categories.hbs
+Converting app/assets/javascripts/discourse/app/templates/discovery/filter.hbs
+Converting app/assets/javascripts/discourse/app/templates/discovery/list.hbs
+Converting app/assets/javascripts/discourse/app/templates/edit-category-tabs.hbs
+Converting app/assets/javascripts/discourse/app/templates/email-login.hbs
+Converting app/assets/javascripts/discourse/app/templates/exception.hbs
+Converting app/assets/javascripts/discourse/app/templates/faq.hbs
+Converting app/assets/javascripts/discourse/app/templates/full-page-search.hbs
+Converting app/assets/javascripts/discourse/app/templates/group-activity-posts.hbs
+Converting app/assets/javascripts/discourse/app/templates/group-activity-topics.hbs
+Converting app/assets/javascripts/discourse/app/templates/group-index.hbs
+Converting app/assets/javascripts/discourse/app/templates/group-requests.hbs
+Converting app/assets/javascripts/discourse/app/templates/group.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/activity.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/categories.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/email.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/interaction.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/logs.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/membership.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/profile.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/manage/tags.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/messages.hbs
+Converting app/assets/javascripts/discourse/app/templates/group/permissions.hbs
+Converting app/assets/javascripts/discourse/app/templates/groups/index.hbs
+Converting app/assets/javascripts/discourse/app/templates/groups/new.hbs
+Converting app/assets/javascripts/discourse/app/templates/hide-modal.hbs
+Converting app/assets/javascripts/discourse/app/templates/invites.hbs
+Converting app/assets/javascripts/discourse/app/templates/invites/show.hbs
+Converting app/assets/javascripts/discourse/app/templates/loading.hbs
+Converting app/assets/javascripts/discourse/app/templates/login-preferences.hbs
+Converting app/assets/javascripts/discourse/app/templates/login.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/categories-only.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/mobile-nav.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/navigation-bar.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/parent-category-row.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/sub-category-item.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/sub-category-row.hbs
+Converting app/assets/javascripts/discourse/app/templates/mobile/components/subcategories-with-featured-topics.hbs
+Converting app/assets/javascripts/discourse/app/templates/modal/reorder-categories.hbs
+Converting app/assets/javascripts/discourse/app/templates/password-reset.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences-email.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences-second-factor.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/account.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/apps.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/categories.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/emails.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/interface.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/navigation-menu.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/notifications.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/profile.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/security.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/tags.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/tracking.hbs
+Converting app/assets/javascripts/discourse/app/templates/preferences/users.hbs
+Converting app/assets/javascripts/discourse/app/templates/privacy.hbs
+Converting app/assets/javascripts/discourse/app/templates/review-index.hbs
+Converting app/assets/javascripts/discourse/app/templates/review-settings.hbs
+Converting app/assets/javascripts/discourse/app/templates/review-show.hbs
+Converting app/assets/javascripts/discourse/app/templates/review-topics.hbs
+Converting app/assets/javascripts/discourse/app/templates/review.hbs
+Converting app/assets/javascripts/discourse/app/templates/second-factor-auth.hbs
+Converting app/assets/javascripts/discourse/app/templates/selected-posts.hbs
+Converting app/assets/javascripts/discourse/app/templates/tag-groups-edit.hbs
+Converting app/assets/javascripts/discourse/app/templates/tag-groups-index.hbs
+Converting app/assets/javascripts/discourse/app/templates/tag-groups-new.hbs
+Converting app/assets/javascripts/discourse/app/templates/tag-groups.hbs
+Converting app/assets/javascripts/discourse/app/templates/tags.hbs
+Converting app/assets/javascripts/discourse/app/templates/tags/index.hbs
+Converting app/assets/javascripts/discourse/app/templates/topic.hbs
+Converting app/assets/javascripts/discourse/app/templates/tos.hbs
+Converting app/assets/javascripts/discourse/app/templates/unknown.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-activity-pending.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-invited-show.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-invited.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-private-messages-group.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-private-messages-tags-index.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-private-messages-tags.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-private-messages-user.hbs
+Converting app/assets/javascripts/discourse/app/templates/user-topics-list.hbs
+Converting app/assets/javascripts/discourse/app/templates/user.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/activity.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/badges.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/bookmarks.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/messages.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/notifications-index.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/notifications.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/posts.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/profile-hidden.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/stream.hbs
+Converting app/assets/javascripts/discourse/app/templates/user/summary.hbs
+Converting app/assets/javascripts/discourse/app/templates/users.hbs
+Converting app/assets/javascripts/select-kit/addon/components/category-drop/category-drop-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/category-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/color-palettes/color-palettes-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/combo-box/combo-box-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/create-color-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/dropdown-select-box/dropdown-select-box-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/dropdown-select-box/dropdown-select-box-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/email-group-user-chooser-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/flair-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/future-date-input-selector/future-date-input-selector-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/future-date-input-selector/future-date-input-selector-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/mini-tag-chooser/selected-collection.hbs
+Converting app/assets/javascripts/select-kit/addon/components/multi-select.hbs
+Converting app/assets/javascripts/select-kit/addon/components/multi-select/format-selected-content.hbs
+Converting app/assets/javascripts/select-kit/addon/components/multi-select/multi-select-filter.hbs
+Converting app/assets/javascripts/select-kit/addon/components/multi-select/multi-select-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/multi-select/selected-category.hbs
+Converting app/assets/javascripts/select-kit/addon/components/none-category-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/notifications-filter/notifications-filter-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/period-chooser/period-chooser-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/period-chooser/period-chooser-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/pinned-button.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/errors-collection.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-body.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-collection.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-create-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-filter.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-none-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/select-kit/single-select-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/selected-choice-category.hbs
+Converting app/assets/javascripts/select-kit/addon/components/selected-choice.hbs
+Converting app/assets/javascripts/select-kit/addon/components/selected-flair.hbs
+Converting app/assets/javascripts/select-kit/addon/components/selected-name.hbs
+Converting app/assets/javascripts/select-kit/addon/components/single-select.hbs
+Converting app/assets/javascripts/select-kit/addon/components/tag-chooser-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/tag-drop/more-tags-collection.hbs
+Converting app/assets/javascripts/select-kit/addon/components/tag-drop/tag-drop-header.hbs
+Converting app/assets/javascripts/select-kit/addon/components/tag-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/toolbar-popup-menu-options/toolbar-popup-menu-options-heading.hbs
+Converting app/assets/javascripts/select-kit/addon/components/topic-notifications-button.hbs
+Converting app/assets/javascripts/select-kit/addon/components/topic-row.hbs
+Converting app/assets/javascripts/select-kit/addon/components/user-chooser/user-row.hbs
+Converting app/assets/javascripts/wizard/addon/components/discourse-logo.hbs
+Converting app/assets/javascripts/wizard/addon/components/styling-preview.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-field-checkbox.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-field-checkboxes.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-field-dropdown.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-field-image.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-field-text.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-field.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-image-preview.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-preview-base.hbs
+Converting app/assets/javascripts/wizard/addon/components/wizard-step.hbs
+Converting app/assets/javascripts/wizard/addon/templates/step.hbs
+Converting app/assets/javascripts/wizard/addon/templates/wizard.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/channels-list.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-browse-view.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-archive-status.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-card.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-chooser-header.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-chooser-row.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-leave-btn.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-metadata.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-preview-card.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-status.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-title.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel-unread-indicator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-composer-dropdown.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-composer-message-details.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-composer-upload.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-composer-uploads.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-composer.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/back-link.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/channel-title.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/close-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/full-page-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/left-actions.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/right-actions.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/toggle-expand-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-drawer/index.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-emoji-avatar.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-emoji-picker.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-full-page-header.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-mention-warnings.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-message-collapser.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-message-in-reply-to-indicator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-message-separator-date.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-message-separator-new.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-message-text.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-message-thread-indicator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-notice.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-notices.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-replying-indicator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-side-panel-resizer.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-side-panel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-skeleton.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-thread.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-to-topic-selector.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-upload-drop-zone.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-upload.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat-user-display-name.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/admin/export-messages.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/composer/button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/composer/separator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message-creator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message-creator/channel-row.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message-creator/user-row.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message-creator/user-selection.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message/avatar.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message/error.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message/info.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/message/left-gutter.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/archive-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/channel-summary.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/create-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/delete-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/edit-channel-description.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/edit-channel-name.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/move-message-to-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/new-message.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/thread-settings.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/modal/toggle-channel-status.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/notices/mention_without_membership.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/scroll-to-bottom-arrow.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/thread-list/item.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/thread-list/item/unread-indicator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/thread/header-unread-indicator.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/thread/threads-list-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/chat/user-card-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/collapser.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/full-page-chat.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/reviewable-chat-message.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-composer-message-details.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-composer.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-header-icon.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-message.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-archive-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-channel-summary.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-create-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-delete-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-edit-channel-description.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-edit-channel-name.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-move-message-to-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-new-message.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-thread-settings.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-modal-toggle-channel-status.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/chat-thread-list-item.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/styleguide/organisms/chat.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/toggle-channel-membership-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/components/user-menu/chat-notifications-list-empty-state.hbs
+Converting plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-channel-message-emoji-picker-connector.hbs
+Converting plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-drawer-outlet.hbs
+Converting plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-message-actions-desktop-outlet.hbs
+Converting plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-message-actions-mobile-outlet.hbs
+Converting plugins/chat/assets/javascripts/discourse/connectors/user-card-below-message-button/chat-button.hbs
+Converting plugins/chat/assets/javascripts/discourse/connectors/user-preferences-nav/chat-preferences.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/admin-plugins-chat.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-browse-all.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-browse-archived.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-browse-closed.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-browse-open.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-browse.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-channel-info-members.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-channel-info-settings.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-channel-info.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-channel-thread.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-channel-threads.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-draft-channel.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat-index.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/chat.hbs
+Converting plugins/chat/assets/javascripts/discourse/templates/preferences/chat.hbs
+Converting plugins/discourse-lazy-videos/assets/javascripts/discourse/components/lazy-iframe.hbs
+Converting plugins/discourse-lazy-videos/assets/javascripts/discourse/components/lazy-video.hbs
+Converting plugins/discourse-local-dates/assets/javascripts/discourse/components/modal/local-dates-create.hbs
+Converting plugins/discourse-presence/assets/javascripts/discourse/components/composer-presence-display.hbs
+Converting plugins/discourse-presence/assets/javascripts/discourse/components/topic-presence-display.hbs
+Converting plugins/discourse-presence/assets/javascripts/discourse/connectors/before-composer-controls/presence.hbs
+Converting plugins/discourse-presence/assets/javascripts/discourse/connectors/topic-above-footer-buttons/presence.hbs
+Converting plugins/poll/assets/javascripts/discourse/components/modal/poll-breakdown.hbs
+Converting plugins/poll/assets/javascripts/discourse/components/modal/poll-ui-builder.hbs
+Converting plugins/poll/assets/javascripts/discourse/components/poll-breakdown-chart.hbs
+Converting plugins/poll/assets/javascripts/discourse/components/poll-breakdown-option.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/color-example.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/01-font-scale.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/02-buttons.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/03-colors.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/04-icons.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/05-input-fields.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/06-spinners.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/date-time-inputs.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/dropdowns.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/topic-link.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/topic-statuses.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/bread-crumbs.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/categories.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/char-counter.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/empty-state.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/footer-message.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/header-icons.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/menus.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/navigation-bar.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/navigation-stacked.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/post-menu.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/signup-cta.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/toasts.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/tooltips.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/topic-list-item.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/topic-notifications.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/topic-timer-info.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/00-post.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/01-topic-map.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/03-topic-footer-buttons.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/04-topic-list.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/basic-topic-list.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/categories-list.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/modal.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/navigation.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/site-header.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/suggested-topics.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/user-about.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide-example.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide-icons.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide-link.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide-section.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide/calendar-date-time-input.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide/component.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide/controls.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide/controls/row.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/styleguide/controls/toggle.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/components/toggle-color-mode.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/templates/styleguide.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/templates/styleguide/index.hbs
+Converting plugins/styleguide/assets/javascripts/discourse/templates/styleguide/show.hbs
+Successfully converted 2 files:
+
+- app/assets/javascripts/admin/addon/components/embeddable-host.hbs
+- app/assets/javascripts/discourse/app/components/modal/create-account.hbs
+
+
+Skipped 385 files:
+
+- Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/components/form-template/info-header.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/components/modal/api-key-urls.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/components/modal/incoming-email.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/components/modal/staff-action-log-details.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-badges.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-badges/award.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-badges/index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-badges/show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-revamp-config-area.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-revamp-config.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-revamp-lobby.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin-revamp.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/admin.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/api-keys-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/api-keys-new.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/api-keys-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/api.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/backups-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/backups-logs.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/backups.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-colors-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-colors-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-colors.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-email-style-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-email-style.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-email-templates-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-email-templates.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-form-templates-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-form-templates-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-form-templates-new.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-robots-txt.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-themes-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-themes-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-themes-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize-themes.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/customize.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/dashboard.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/dashboard_general.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/dashboard_moderation.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/dashboard_reports.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/dashboard_security.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-advanced-test.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-bounced.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-preview-digest.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-received.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-rejected.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-sent.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email-skipped.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/email.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/embedding.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/emojis.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/logs.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/logs/screened-emails.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/logs/screened-ip-addresses.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/logs/screened-urls.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/logs/staff-action-logs.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/permalinks.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/plugins-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/plugins.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/reports-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/search-logs-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/search-logs-term.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/site-settings-category.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/site-settings.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/site-text-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/site-text-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/site-text.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/user-badges.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/user-fields.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/user-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/user-tl3-requirements.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/user.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/users-list-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/users-list.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/watched-words-action.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/watched-words.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/web-hooks-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/web-hooks-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/web-hooks-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/admin/addon/templates/web-hooks.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/char-counter.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/composer-fullscreen-prompt.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/composer-tip-close-button.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/conditional-in-element.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-lightbox/backdrop.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-lightbox/body.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-lightbox/carousel.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-lightbox/footer.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-lightbox/header.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-lightbox/screen-reader-announcer.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/d-modal-cancel.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/dialog-messages/group-delete.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/discovery/layout.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/form-template-field/checkbox.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/form-template-field/dropdown.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/form-template-field/input.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/form-template-field/textarea.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/google-icon.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/menu-panel.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/activation-resent.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/add-pm-participants.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/create-invite-bulk.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/delete-topic-disallowed.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/fast-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/form-template-form-preview.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/fullscreen-table.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/history/revision.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/history/revisions.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/history/topic-footer.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/login/footer.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/login/welcome-header.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/post-enqueued.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/modal/tag-upload.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/advanced-button.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/clear-button.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/results/type/category.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/results/type/group.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/results/type/post.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/results/type/tag.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/search-menu/results/type/user.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/api-panels.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/common/all-categories-section-link.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/common/all-tags-section-link.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/more-section-link.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/section-header.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/section-link-button.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/section-message.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/sidebar/sections.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/toggle-password-mask.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/topic-timeline/back-button.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-menu/bookmarks-list-empty-state.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-menu/items-list-empty-state.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-menu/likes-list-empty-state.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-menu/messages-list-empty-state.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-menu/notifications-list-empty-state.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-menu/other-notifications-list-empty-state.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-nav.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-preferences/categories.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-preferences/tags.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-preferences/topic-tracking.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/components/user-preferences/user-api-keys.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/about.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/account-created.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/account-created/edit-email.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/account-created/index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/account-created/resent.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/application.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/badges/index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/badges/show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/composer/dominating-topic.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/composer/education.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/composer/get-a-room.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/composer/group-mentioned.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/composer/similar-topics.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/discovery/categories.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/discovery/filter.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/discovery/list.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/edit-category-tabs.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/email-login.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/exception.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/faq.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/full-page-search.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group-activity-posts.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group-activity-topics.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group-requests.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/activity.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/categories.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/email.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/interaction.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/logs.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/membership.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/profile.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/manage/tags.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/messages.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/group/permissions.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/groups/index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/groups/new.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/hide-modal.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/invites.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/invites/show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/loading.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/login-preferences.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/login.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/categories-only.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/mobile-nav.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/navigation-bar.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/parent-category-row.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/sub-category-item.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/sub-category-row.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/mobile/components/subcategories-with-featured-topics.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/modal/reorder-categories.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/password-reset.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences-email.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences-second-factor.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/account.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/apps.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/categories.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/emails.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/interface.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/navigation-menu.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/notifications.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/profile.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/security.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/tags.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/tracking.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/preferences/users.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/privacy.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/review-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/review-settings.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/review-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/review-topics.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/review.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/second-factor-auth.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/selected-posts.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tag-groups-edit.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tag-groups-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tag-groups-new.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tag-groups.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tags.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tags/index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/topic.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/tos.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/unknown.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-activity-pending.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-invited-show.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-invited.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-private-messages-group.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-private-messages-tags-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-private-messages-tags.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-private-messages-user.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user-topics-list.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/activity.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/badges.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/bookmarks.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/messages.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/notifications-index.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/notifications.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/posts.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/profile-hidden.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/stream.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/user/summary.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/discourse/app/templates/users.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/wizard/addon/components/discourse-logo.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/wizard/addon/templates/step.hbs
+    Not eligible: no JS file
+  - app/assets/javascripts/wizard/addon/templates/wizard.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat-drawer/header/close-button.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat-emoji-avatar.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat-message-separator-new.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat-side-panel-resizer.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat/message-creator/user-selection.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat/message/avatar.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat/message/error.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/chat/scroll-to-bottom-arrow.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/components/styleguide/organisms/chat.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-channel-message-emoji-picker-connector.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-drawer-outlet.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-message-actions-desktop-outlet.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/connectors/below-footer/chat-message-actions-mobile-outlet.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/connectors/user-card-below-message-button/chat-button.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/admin-plugins-chat.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-browse-all.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-browse-archived.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-browse-closed.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-browse-open.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-browse.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-channel-info-members.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-channel-info-settings.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-channel-info.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-channel-thread.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-channel-threads.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-channel.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-draft-channel.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat-index.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/chat.hbs
+    Not eligible: no JS file
+  - plugins/chat/assets/javascripts/discourse/templates/preferences/chat.hbs
+    Not eligible: no JS file
+  - plugins/discourse-presence/assets/javascripts/discourse/connectors/before-composer-controls/presence.hbs
+    Not eligible: no JS file
+  - plugins/discourse-presence/assets/javascripts/discourse/connectors/topic-above-footer-buttons/presence.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/color-example.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/01-font-scale.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/02-buttons.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/03-colors.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/04-icons.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/05-input-fields.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/06-spinners.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/date-time-inputs.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/dropdowns.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/topic-link.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/atoms/topic-statuses.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/bread-crumbs.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/categories.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/char-counter.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/empty-state.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/footer-message.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/header-icons.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/navigation-bar.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/navigation-stacked.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/post-menu.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/signup-cta.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/topic-list-item.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/topic-notifications.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/molecules/topic-timer-info.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/00-post.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/01-topic-map.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/03-topic-footer-buttons.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/04-topic-list.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/basic-topic-list.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/categories-list.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/navigation.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/site-header.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/suggested-topics.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/sections/organisms/user-about.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/styleguide-link.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/components/styleguide/controls/row.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/templates/styleguide.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/templates/styleguide/index.hbs
+    Not eligible: no JS file
+  - plugins/styleguide/assets/javascripts/discourse/templates/styleguide/show.hbs
+    Not eligible: no JS file
+- Decorators cannot be used to decorate object literal properties. (36:2)
+  - app/assets/javascripts/discourse/app/components/backup-codes.hbs
+    Decorators cannot be used to decorate object literal properties. (36:2)
+- Decorators cannot be used to decorate object literal properties. (19:2)
+  - app/assets/javascripts/discourse/app/components/bookmark-list.hbs
+    Decorators cannot be used to decorate object literal properties. (19:2)
+  - app/assets/javascripts/discourse/app/components/create-invite-uploader.hbs
+    Decorators cannot be used to decorate object literal properties. (19:2)
+  - app/assets/javascripts/discourse/app/components/date-time-input.hbs
+    Decorators cannot be used to decorate object literal properties. (19:2)
+- Decorators cannot be used to decorate object literal properties. (15:2)
+  - app/assets/javascripts/discourse/app/components/category-permission-row.hbs
+    Decorators cannot be used to decorate object literal properties. (15:2)
+  - app/assets/javascripts/discourse/app/components/date-time-input-range.hbs
+    Decorators cannot be used to decorate object literal properties. (15:2)
+  - app/assets/javascripts/discourse/app/components/relative-time-picker.hbs
+    Decorators cannot be used to decorate object literal properties. (15:2)
+- Decorators cannot be used to decorate object literal properties. (59:2)
+  - app/assets/javascripts/discourse/app/components/choose-topic.hbs
+    Decorators cannot be used to decorate object literal properties. (59:2)
+- Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/color-picker.hbs
+    Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/expand-post.hbs
+    Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/ignored-user-list-item.hbs
+    Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/ignored-user-list.hbs
+    Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/reviewable-field-tags.hbs
+    Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/share-source.hbs
+    Invalid: Does not export a class
+  - app/assets/javascripts/discourse/app/components/user-stream.hbs
+    Invalid: Does not export a class
+- Decorators cannot be used to decorate object literal properties. (131:2)
+  - app/assets/javascripts/discourse/app/components/composer-editor.hbs
+    Decorators cannot be used to decorate object literal properties. (131:2)
+- Decorators cannot be used to decorate object literal properties. (18:2)
+  - app/assets/javascripts/discourse/app/components/composer-user-selector.hbs
+    Decorators cannot be used to decorate object literal properties. (18:2)
+  - app/assets/javascripts/discourse/app/components/d-navigation.hbs
+    Decorators cannot be used to decorate object literal properties. (18:2)
+  - app/assets/javascripts/discourse/app/components/edit-category-settings.hbs
+    Decorators cannot be used to decorate object literal properties. (18:2)
+  - app/assets/javascripts/wizard/addon/components/wizard-field-dropdown.hbs
+    Decorators cannot be used to decorate object literal properties. (18:2)
+- Decorators cannot be used to decorate object literal properties. (250:2)
+  - app/assets/javascripts/discourse/app/components/d-editor.hbs
+    Decorators cannot be used to decorate object literal properties. (250:2)
+- Decorators cannot be used to decorate object literal properties. (23:2)
+  - app/assets/javascripts/discourse/app/components/date-input.hbs
+    Decorators cannot be used to decorate object literal properties. (23:2)
+  - app/assets/javascripts/select-kit/addon/components/topic-notifications-button.hbs
+    Decorators cannot be used to decorate object literal properties. (23:2)
+- Decorators cannot be used to decorate object literal properties. (22:2)
+  - app/assets/javascripts/discourse/app/components/desktop-notification-config.hbs
+    Decorators cannot be used to decorate object literal properties. (22:2)
+  - app/assets/javascripts/discourse/app/components/uppy-image-uploader.hbs
+    Decorators cannot be used to decorate object literal properties. (22:2)
+- Decorators cannot be used to decorate object literal properties. (6:2)
+  - app/assets/javascripts/discourse/app/components/edit-category-images.hbs
+    Decorators cannot be used to decorate object literal properties. (6:2)
+- Decorators cannot be used to decorate object literal properties. (10:2)
+  - app/assets/javascripts/discourse/app/components/edit-category-security.hbs
+    Decorators cannot be used to decorate object literal properties. (10:2)
+  - app/assets/javascripts/discourse/app/components/edit-category-tags.hbs
+    Decorators cannot be used to decorate object literal properties. (10:2)
+  - app/assets/javascripts/discourse/app/components/flag-action-type.hbs
+    Decorators cannot be used to decorate object literal properties. (10:2)
+- Decorators cannot be used to decorate object literal properties. (73:2)
+  - app/assets/javascripts/discourse/app/components/edit-topic-timer-form.hbs
+    Decorators cannot be used to decorate object literal properties. (73:2)
+- Decorators cannot be used to decorate object literal properties. (67:2)
+  - app/assets/javascripts/discourse/app/components/emoji-picker.hbs
+    Decorators cannot be used to decorate object literal properties. (67:2)
+  - app/assets/javascripts/discourse/app/components/time-shortcut-picker.hbs
+    Decorators cannot be used to decorate object literal properties. (67:2)
+- Decorators cannot be used to decorate object literal properties. (27:2)
+  - app/assets/javascripts/discourse/app/components/emoji-uploader.hbs
+    Decorators cannot be used to decorate object literal properties. (27:2)
+  - app/assets/javascripts/discourse/app/components/tag-groups-form.hbs
+    Decorators cannot be used to decorate object literal properties. (27:2)
+- Decorators cannot be used to decorate object literal properties. (56:2)
+  - app/assets/javascripts/discourse/app/components/future-date-input.hbs
+    Decorators cannot be used to decorate object literal properties. (56:2)
+- Decorators cannot be used to decorate object literal properties. (35:2)
+  - app/assets/javascripts/discourse/app/components/group-card-contents.hbs
+    Decorators cannot be used to decorate object literal properties. (35:2)
+- Decorators cannot be used to decorate object literal properties. (17:2)
+  - app/assets/javascripts/discourse/app/components/group-flair-inputs.hbs
+    Decorators cannot be used to decorate object literal properties. (17:2)
+- Decorators cannot be used to decorate object literal properties. (13:2)
+  - app/assets/javascripts/discourse/app/components/group-imap-email-settings.hbs
+    Decorators cannot be used to decorate object literal properties. (13:2)
+  - app/assets/javascripts/discourse/app/components/group-smtp-email-settings.hbs
+    Decorators cannot be used to decorate object literal properties. (13:2)
+- Decorators cannot be used to decorate object literal properties. (16:2)
+  - app/assets/javascripts/discourse/app/components/group-membership-button.hbs
+    Decorators cannot be used to decorate object literal properties. (16:2)
+  - app/assets/javascripts/discourse/app/components/share-panel.hbs
+    Decorators cannot be used to decorate object literal properties. (16:2)
+  - app/assets/javascripts/wizard/addon/components/wizard-field-checkboxes.hbs
+    Decorators cannot be used to decorate object literal properties. (16:2)
+- Decorators cannot be used to decorate object literal properties. (44:2)
+  - app/assets/javascripts/discourse/app/components/groups-form-membership-fields.hbs
+    Decorators cannot be used to decorate object literal properties. (44:2)
+  - app/assets/javascripts/discourse/app/components/topic-entrance.hbs
+    Decorators cannot be used to decorate object literal properties. (44:2)
+- Decorators cannot be used to decorate object literal properties. (39:2)
+  - app/assets/javascripts/discourse/app/components/invite-panel.hbs
+    Decorators cannot be used to decorate object literal properties. (39:2)
+- Decorators cannot be used to decorate object literal properties. (28:2)
+  - app/assets/javascripts/discourse/app/components/modal/create-invite.hbs
+    Decorators cannot be used to decorate object literal properties. (28:2)
+- Decorators cannot be used to decorate object literal properties. (30:2)
+  - app/assets/javascripts/discourse/app/components/modal/share-topic.hbs
+    Decorators cannot be used to decorate object literal properties. (30:2)
+  - app/assets/javascripts/discourse/app/components/software-update-prompt.hbs
+    Decorators cannot be used to decorate object literal properties. (30:2)
+- Decorators cannot be used to decorate object literal properties. (8:2)
+  - app/assets/javascripts/discourse/app/components/notification-consent-banner.hbs
+    Decorators cannot be used to decorate object literal properties. (8:2)
+- Decorators cannot be used to decorate object literal properties. (48:2)
+  - app/assets/javascripts/discourse/app/components/pick-files-button.hbs
+    Decorators cannot be used to decorate object literal properties. (48:2)
+- Decorators cannot be used to decorate object literal properties. (9:2)
+  - app/assets/javascripts/discourse/app/components/pwa-install-banner.hbs
+    Decorators cannot be used to decorate object literal properties. (9:2)
+  - app/assets/javascripts/discourse/app/components/reviewable-claimed-topic.hbs
+    Decorators cannot be used to decorate object literal properties. (9:2)
+  - app/assets/javascripts/discourse/app/components/signup-cta.hbs
+    Decorators cannot be used to decorate object literal properties. (9:2)
+  - app/assets/javascripts/select-kit/addon/components/multi-select/multi-select-filter.hbs
+    Decorators cannot be used to decorate object literal properties. (9:2)
+- Decorators cannot be used to decorate object literal properties. (53:2)
+  - app/assets/javascripts/discourse/app/components/reviewable-item.hbs
+    Decorators cannot be used to decorate object literal properties. (53:2)
+- Decorators cannot be used to decorate object literal properties. (372:2)
+  - app/assets/javascripts/discourse/app/components/search-advanced-options.hbs
+    Decorators cannot be used to decorate object literal properties. (372:2)
+- Decorators cannot be used to decorate object literal properties. (7:2)
+  - app/assets/javascripts/discourse/app/components/second-factor-input.hbs
+    Decorators cannot be used to decorate object literal properties. (7:2)
+- Decorators cannot be used to decorate object literal properties. (11:2)
+  - app/assets/javascripts/discourse/app/components/shared-draft-controls.hbs
+    Decorators cannot be used to decorate object literal properties. (11:2)
+- Decorators cannot be used to decorate object literal properties. (26:2)
+  - app/assets/javascripts/discourse/app/components/tag-info.hbs
+    Decorators cannot be used to decorate object literal properties. (26:2)
+- Decorators cannot be used to decorate object literal properties. (147:2)
+  - app/assets/javascripts/discourse/app/components/time-input.hbs
+    Decorators cannot be used to decorate object literal properties. (147:2)
+- Decorators cannot be used to decorate object literal properties. (50:2)
+  - app/assets/javascripts/discourse/app/components/user-card-contents.hbs
+    Decorators cannot be used to decorate object literal properties. (50:2)
+- Decorators cannot be used to decorate object literal properties. (29:2)
+  - app/assets/javascripts/select-kit/addon/components/select-kit/select-kit-filter.hbs
+    Decorators cannot be used to decorate object literal properties. (29:2)
+- Decorators cannot be used to decorate object literal properties. (60:2)
+  - plugins/chat/assets/javascripts/discourse/components/chat-composer-uploads.hbs
+    Decorators cannot be used to decorate object literal properties. (60:2)
+
+
